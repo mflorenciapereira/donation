@@ -1,0 +1,108 @@
+
++---bin
+|       www
+|       
++---bower_components
++---documentation
+|       Doc.doc
+|       
++---node_modules
++---public
+|   |   dojoConfigBrowser.js
+|   |   esriLoadConfig.js
+|   |   esriSystemLoadBrowser.js
+|   |   index.html
+|   |   systemjs.config.cdn.js
+|   |   systemjs.config.js
+|   |   
+|   \---app
+|       |   app.routes.ts
+|       |   communication.service.ts
+|       |   login.component.html
+|       |   login.component.ts
+|       |   main.component.html
+|       |   main.component.ts
+|       |   main.ts
+|       |   map.service.ts
+|       |   modal.component.ts
+|       |   modal.html
+|       |   patient-map.component.html
+|       |   patient-map.component.ts
+|       |   patient.component.ts
+|       |   point.model.ts
+|       |   points.model.ts
+|       |   voluntary-map.component.html
+|       |   voluntary-map.component.ts
+|       |   voluntary.component.ts
+|       |   
+|       +---img
+|       |       
+|       +---main
+|       |               
+|       \---styles
+|               main.css
+|               
++---server
+|   +---config
+|   |   |   config.js
+|   |   |   express.js
+|   |   |   mongoose.js
+|   |   |   socketio.js
+|   |   |   
+|   |   \---env
+|   |           development.js
+|   |           test.js
+|   |           
+|   +---controllers
+|   |       point.server.controller.js
+|   |       
+|   +---models
+|           point.server.model.js
+|           user.server.model.js
+|           
++---test
+|       pointSpec.js
+|       
+\---typings
+    |   browser.d.ts
+    |   index.d.ts
+    |   main.d.ts
+    |   tsd.d.ts
+    |   
+    +---browser
+    |   \---ambient
+    |       \---es6-shim
+    |               es6-shim.d.ts
+    |               
+    +---globals
+    |   +---arcgis-js-api
+    |   |       index.d.ts
+    |   |       typings.json
+    |   |       
+    |   +---core-js
+    |   |       index.d.ts
+    |   |       typings.json
+    |   |       
+    |   +---dojo
+    |   |       index.d.ts
+    |   |       typings.json
+    |   |       
+    |   +---jasmine
+    |   |       index.d.ts
+    |   |       typings.json
+    |   |       
+    |   \---socket-io-client
+    |           index.d.ts
+    |           typings.json
+    |           
+    +---jquery
+    |       jquery.d.ts
+    |       
+    +---main
+    |   \---ambient
+    |       \---es6-shim
+    |               es6-shim.d.ts
+    |               
+    \---socket.io-client
+            socket.io-client.d.ts
+            

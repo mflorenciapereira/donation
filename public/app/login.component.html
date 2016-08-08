@@ -1,0 +1,10 @@
+<div class="container">
+	<div class="login">
+		<h2 class="form-signin-heading">Please log in</h2>
+		<label class="sr-only" for="inputEmail">Username</label>
+		<input  [(ngModel)]="userId" class="form-control" placeholder="username">
+<br>		
+		<button (click)="patient()" class="btn btn-lg btn-primary btn-block" type="submit">Patient</button>
+		<button (click)="voluntary()" class="btn btn-lg btn-primary btn-block" type="submit">Voluntary</button>
+	</div>
+</div>

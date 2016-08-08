@@ -1,0 +1,17 @@
+body {
+    
+    color: #333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+	background-color: #eee;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.login{
+	margin: 0 auto;
+    max-width: 330px;
+    padding: 15px;
+}
+
+

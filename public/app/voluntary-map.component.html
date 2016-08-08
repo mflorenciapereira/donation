@@ -1,0 +1,80 @@
+<div id="viewDiv" style="height:600px"><ng-content></ng-content></div>
+<modal [title]='"Voluntary"' [showClose]="true" (onClose)="close()" #editModal>{{ bindModal(editModal) }} 
+<div>
+    <div class="container">		
+		<h1>Add voluntary</h1>
+		<div class="row">
+		  <div class="col-xs-5">	
+			<div *ngIf="ok" class="alert alert-success">{{ok}}</div>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-xs-5">	
+			<div *ngIf="error" class="alert alert-danger">{{error}}</div>		 
+		  </div>
+		</div>
+		<div  [hidden]="submitted">
+		<form *ngIf="active" (ngSubmit)="onSubmit()" #pointForm="ngForm">
+		<div class="row">
+		  <div class="col-xs-5">
+			<label for="name">First name</label>
+			<input type="text" class="form-control" required [(ngModel)]="point.firstName" name="firstName"  #firstName="ngModel" >
+			<div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+			  First name is required
+			</div>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-xs-5">
+			<label for="lastName">Last name</label>
+			<input type="text" class="form-control" required [(ngModel)]="point.lastName" name="lastName"  #lastName="ngModel" >
+			<div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+			  Last Name is required
+			</div>
+		  </div>	
+		</div>
+		<div class="row">
+		  <div class="col-xs-5">
+			<label for="address">Address</label>
+			<input type="text" class="form-control" required [(ngModel)]="point.address" name="address"  #address="ngModel" >
+			<div [hidden]="address.valid || address.pristine" class="alert alert-danger">
+			  Address is required
+			</div>
+		  </div>
+		 </div>
+		 <div class="row">
+		  <div class="col-xs-5">
+			<label for="phone">Phone</label>
+			<input type="text" class="form-control" required pattern="^(00|\+)[0-9]{12}$" [(ngModel)]="point.phone" name="phone"  #phone="ngModel" >
+			<div [hidden]="phone.valid || phone.pristine || !phone.errors.required" class="alert alert-danger">Phone is required.</div>
+			<div [hidden]="phone.valid || phone.pristine || !phone.errors.pattern" class="alert alert-danger">Phone is invalid.</div>
+		  </div>
+		 </div>
+		 <div class="row">
+		  <div class="col-xs-5">
+			<label for="email">Email</label>
+			<input type="text" class="form-control" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [(ngModel)]="point.email" name="email"  #email="ngModel" >
+			<div [hidden]="email.valid || email.pristine || !email.errors.required" class="alert alert-danger">Email is required.</div>
+			<div [hidden]="email.valid || email.pristine || !email.errors.pattern" class="alert alert-danger">Email is invalid.</div>
+		  </div>	
+		 </div>
+		 <div class="row">		  
+		  <div class="col-xs-5">
+			<label for="bloodGroup">Blood group</label>
+			<input type="text" class="form-control" required [(ngModel)]="point.bloodGroup" name="bloodGroup"  #bloodGroup="ngModel" >
+			<div [hidden]="bloodGroup.valid || bloodGroup.pristine" class="alert alert-danger">
+			  Blood group is required
+			</div>
+		  </div> 		  
+		 </div>
+		 <div class="row">
+		 <div class="col-xs-5">
+		 <br>
+		 <button type="submit" class="btn btn-primary" [disabled]="!pointForm.form.valid">Submit</button>          
+		 </div>
+		 </div>
+		</form>		      
+		</div>
+	</div>
+</div>
+<mfoot><button class="btn" (click)="close()">Close</button></mfoot></modal>
