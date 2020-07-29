@@ -3,9 +3,9 @@
   // map tells the System loader where to look for things
   var map = {
     'app':                        'app', // 'dist',
-    '@angular':                   'https://npmcdn.com/@angular', // sufficient if we didn't pin the version
-    'angular2-in-memory-web-api': 'https://npmcdn.com/angular2-in-memory-web-api', // get latest
-    'rxjs':                       'https://npmcdn.com/rxjs@5.0.0-beta.6',
+    '@angular':                   'https://unpkg.com/@angular', // sufficient if we didn't pin the version
+    'angular2-in-memory-web-api': 'https://unpkg.com/angular2-in-memory-web-api', // get latest
+    'rxjs':                       'https://unpkg.com/rxjs@5.0.0-beta.6',
     'esri':                       'http://js.arcgis.com/4.0/esri',
 	"socket.io-client": 		"https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"
 	
@@ -35,7 +35,7 @@
   // Add map entries for each angular package
  
   ngPackageNames.forEach(function(pkgName) {
-    map['@angular/'+pkgName] = 'https://npmcdn.com/@angular/' + pkgName;
+    map['@angular/'+pkgName] = 'https://unpkg.com/@angular/' + pkgName;
   });
 
   // Bundled (~40 requests):
